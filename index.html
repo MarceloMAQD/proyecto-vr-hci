@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto VR · Interacción Humano-Computador</title>
+<meta name="description" content="Documentación del proceso de diseño y desarrollo de un juego de supervivencia en VR para el curso de Interacción Humano-Computador.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#inicio" class="brand">Proyecto<span>VR</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="siteNav">
+      <a href="#inicio" class="nav-link">Inicio</a>
+      <a href="#ideacion" class="nav-link">Cómo nació la idea</a>
+      <a href="#desarrollo" class="nav-link">Desarrollo</a>
+      <a href="#pruebas" class="nav-link">Pruebas de usuario</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inicio">
+    <div class="hero-spotlight" id="heroSpotlight" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Curso de Interacción Humano-Computador</p>
+      <h1>Sobrevive la noche.<br>Escucha antes de mirar.</h1>
+      <p class="hero-sub">Documentamos cómo pasamos de una lista de ideas sueltas a un juego de supervivencia en realidad virtual: linterna, puertas y una amenaza que se guía por el sonido.</p>
+      <a href="#ideacion" class="hero-cta">Ver el proceso ↓</a>
+    </div>
+    <p class="hero-hint">Mueve el cursor — así ve el jugador con la linterna apagada.</p>
+  </section>
+
+  <!-- ================= SECCIÓN 1: IDEACIÓN ================= -->
+  <section class="section" id="ideacion">
+    <div class="section-inner">
+
+      <header class="section-head">
+        <p class="step-label">Parte 1</p>
+        <h2>Cómo llegamos a la idea</h2>
+        <p class="section-lead">Cinco pasos, del brainstorming individual a las reglas de interacción del juego final.</p>
+      </header>
+
+      <ol class="process-rail">
+        <li><a href="#lluvia">Lluvia de ideas</a></li>
+        <li><a href="#agrupar">Agrupar ideas</a></li>
+        <li><a href="#final">Idea final</a></li>
+        <li><a href="#funcionalidades">Funcionalidades</a></li>
+        <li><a href="#interaccion">Interacción</a></li>
+      </ol>
+
+      <!-- Lluvia de ideas -->
+      <div class="subsection" id="lluvia">
+        <h3>1 · Lluvia de ideas</h3>
+        <p>Cada integrante del equipo propuso un concepto de juego por su cuenta, sin filtrar nada todavía.</p>
+
+        <div class="idea-grid">
+          <article class="idea-card">
+            <div class="idea-media"><img src="images/idea-anthony.jpg" alt="Boceto del juego de cortar frutas propuesto por Anthony" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+            <p class="idea-author">Anthony Condorios</p>
+            <h4>Cortar fruta game</h4>
+            <p>Juego de frutas que van siendo lanzadas y el jugador se encarga de cortarlas, evitando los objetos que no son frutas.</p>
+          </article>
+
+          <article class="idea-card">
+            <div class="idea-media"><img src="images/idea-marcelo.jpg" alt="Boceto del juego de supervivencia propuesto por Marcelo" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+            <p class="idea-author">Marcelo Quina</p>
+            <h4>Supervivencia game</h4>
+            <p>Juego en el que una persona debe estar atenta al movimiento de distintos robots con el objetivo de sobrevivir.</p>
+          </article>
+
+          <article class="idea-card">
+            <div class="idea-media"><img src="images/idea-fernando.jpg" alt="Boceto del juego de estrategia propuesto por Fernando" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+            <p class="idea-author">Fernando Chávez</p>
+            <h4>Battle tactics</h4>
+            <p>Juego de estrategia donde comandas una flota armada para eliminar a la flota enemiga en un entorno virtual.</p>
+          </article>
+
+          <article class="idea-card">
+            <div class="idea-media"><img src="images/idea-joaquin.jpg" alt="Boceto del juego de ritmo propuesto por Joaquín" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+            <p class="idea-author">Joaquín Castelo</p>
+            <h4>Beat saber</h4>
+            <p>Juego de reacción y ritmo musical, cuyo objetivo es eliminar objetivos al ritmo de la música.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- Agrupar ideas -->
+      <div class="subsection" id="agrupar">
+        <h3>2 · Agrupar ideas</h3>
+        <p>Revisamos las cuatro propuestas y sacamos lo que se repetía: todas giraban en torno a reaccionar rápido ante una amenaza con información limitada. De ahí salieron los puntos que definieron el diseño.</p>
+
+        <ul class="check-list">
+          <li>Supervivencia y monitoreo de criaturas hostiles mediante cámaras.</li>
+          <li>Gestión táctica de energía, puertas y visibilidad limitada.</li>
+          <li>Reacciones rápidas de defensa ante eventos críticos.</li>
+          <li>Detección de amenazas mediante señales sonoras espaciales.</li>
+          <li>Diseño centrado en la carga cognitiva y la atención dividida del usuario.</li>
+          <li>Controles diegéticos, intuitivos y con mapeo espacial claro.</li>
+          <li>Retroalimentación audiovisual inmediata sobre el estado del sistema.</li>
+        </ul>
+      </div>
+
+      <!-- Idea final -->
+      <div class="subsection subsection-final" id="final">
+        <h3>3 · Idea final</h3>
+        <blockquote class="final-quote">
+          Sobrevivir una noche en un espacio limitado, con amenazas que irán a acecharte.
+        </blockquote>
+        <p>El juego se apoya en mecánicas de sonido, luces y movimiento, con retroalimentación audiovisual y atención dividida: el jugador debe moverse, escuchar y revisar distintos lugares al mismo tiempo para seguir con vida.</p>
+
+        <div class="final-media">
+          <div class="idea-media wide"><img src="images/concepto-1.jpg" alt="Concepto visual del personaje amenazante" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+          <div class="idea-media wide"><img src="images/concepto-2.jpg" alt="Boceto del mapa y layout de la oficina en VR" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+        </div>
+      </div>
+
+      <!-- Funcionalidades -->
+      <div class="subsection" id="funcionalidades">
+        <h3>4 · Funcionalidades del videojuego</h3>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <span class="feature-icon">🔦</span>
+            <h4>Linterna</h4>
+            <p>El jugador puede encender o apagar la linterna para iluminar zonas oscuras y detectar enemigos. También sirve para ahuyentarlos.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🚪</span>
+            <h4>Puertas</h4>
+            <p>Se pueden abrir o cerrar para comprobar si hay algún enemigo al otro lado, evitar el encuentro o enfrentarlo directamente.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">👁️</span>
+            <h4>Vista y vigilancia</h4>
+            <p>El jugador debe mantenerse atento a cualquier movimiento fuera de la oficina, ya que los enemigos aparecen y se desplazan por los alrededores.</p>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">⏱️</span>
+            <h4>Tiempo</h4>
+            <p>Hay que aguantar hasta el amanecer, a las 6am, sobreviviendo el tiempo suficiente para salir victorioso.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interacción -->
+      <div class="subsection" id="interaccion">
+        <h3>5 · Interacción</h3>
+        <div class="interaction-grid">
+          <div class="interaction-row">
+            <span class="interaction-tag tag-touch">Táctil</span>
+            <p>Abrir y cerrar puertas.</p>
+          </div>
+          <div class="interaction-row">
+            <span class="interaction-tag tag-visual">Visual</span>
+            <p>Encender y apagar la linterna.</p>
+          </div>
+          <div class="interaction-row">
+            <span class="interaction-tag tag-touch">Táctil</span>
+            <p>Interactuar con objetos de la oficina y usar elementos del entorno para evitar o ahuyentar enemigos.</p>
+          </div>
+          <div class="interaction-row">
+            <span class="interaction-tag tag-audio">Audio</span>
+            <p>Escuchar sonidos extraños para ubicar a los atacantes.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN 2: DESARROLLO ================= -->
+  <section class="section section-alt" id="desarrollo">
+    <div class="section-inner">
+      <header class="section-head">
+        <p class="step-label">Parte 2</p>
+        <h2>Cómo lo desarrollamos</h2>
+        <p class="section-lead">
+          <!-- Reemplaza este texto con la narración real del desarrollo: bloqueo en Unity, modelado 3D, iluminación, sonido espacial, iteraciones, etc. -->
+          Aquí va la narración del desarrollo: capturas de Unity, avance de los modelos 3D y las decisiones que tomamos en el camino.
+        </p>
+      </header>
+
+      <!-- Plantilla de galería: duplica este bloque .dev-item por cada avance que quieras mostrar -->
+      <div class="dev-gallery">
+        <article class="dev-item">
+          <div class="idea-media wide"><img src="images/desarrollo-1.jpg" alt="Captura del entorno en Unity" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+          <p class="dev-caption">Primer bloqueo del mapa (greybox) en Unity.</p>
+        </article>
+        <article class="dev-item">
+          <div class="idea-media wide"><img src="images/desarrollo-2.jpg" alt="Modelo 3D del personaje enemigo" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+          <p class="dev-caption">Modelado del enemigo principal.</p>
+        </article>
+        <article class="dev-item">
+          <div class="idea-media wide"><img src="images/desarrollo-3.jpg" alt="Sistema de iluminación con linterna" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+          <p class="dev-caption">Sistema de linterna e iluminación dinámica.</p>
+        </article>
+      </div>
+
+      <p class="section-note">📁 Coloca tus imágenes en la carpeta <code>/images</code> con estos nombres (o cambia el <code>src</code> en <code>index.html</code>), y duplica el bloque <code>.dev-item</code> para agregar más avances.</p>
+    </div>
+  </section>
+
+  <!-- ================= SECCIÓN 3: PRUEBAS DE USUARIO ================= -->
+  <section class="section" id="pruebas">
+    <div class="section-inner">
+      <header class="section-head">
+        <p class="step-label">Parte 3</p>
+        <h2>Pruebas de usuario</h2>
+        <p class="section-lead">
+          <!-- Reemplaza este texto con el resumen real de las pruebas: qué se probó, cuántos usuarios, qué se ajustó después -->
+          Grabamos a distintos usuarios probando el juego en VR y les pedimos su opinión al terminar.
+        </p>
+      </header>
+
+      <!-- Plantilla de galería de video: duplica .test-item por cada usuario/prueba -->
+      <div class="test-gallery">
+        <article class="test-item">
+          <video controls preload="none" poster="images/video-poster-1.jpg">
+            <source src="videos/prueba-1.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+          <p class="dev-caption">Usuario 1 — primera vez probando el juego.</p>
+        </article>
+        <article class="test-item">
+          <video controls preload="none" poster="images/video-poster-2.jpg">
+            <source src="videos/prueba-2.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+          <p class="dev-caption">Usuario 2 — opinión sobre la mecánica de linterna.</p>
+        </article>
+        <article class="test-item">
+          <video controls preload="none" poster="images/video-poster-3.jpg">
+            <source src="videos/prueba-3.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+          </video>
+          <p class="dev-caption">Usuario 3 — opinión sobre la detección por sonido.</p>
+        </article>
+      </div>
+
+      <p class="section-note">📁 Coloca tus videos en <code>/videos</code> y sus miniaturas en <code>/images</code> con estos nombres (o cambia el <code>src</code>/<code>poster</code> en <code>index.html</code>). Duplica <code>.test-item</code> para agregar más usuarios.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Proyecto del curso de Interacción Humano-Computador · Desarrollado en Unity para VR</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
