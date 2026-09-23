@@ -263,31 +263,64 @@
         </p>
       </header>
 
-      <!-- Plantilla de galería de video: duplica .test-item por cada usuario/prueba -->
-      <div class="test-gallery">
-        <article class="test-item">
-          <video controls preload="none" poster="images/video-poster-1.jpg">
-            <source src="videos/prueba-1.mp4" type="video/mp4">
-            Tu navegador no soporta el video.
-          </video>
-          <p class="dev-caption">Usuario 1 — primera vez probando el juego.</p>
-        </article>
-        <article class="test-item">
-          <video controls preload="none" poster="images/video-poster-2.jpg">
-            <source src="videos/prueba-2.mp4" type="video/mp4">
-            Tu navegador no soporta el video.
-          </video>
-          <p class="dev-caption">Usuario 2 — opinión sobre la mecánica de linterna.</p>
-        </article>
-        <article class="test-item">
-          <video controls preload="none" poster="images/video-poster-3.jpg">
-            Tu navegador no soporta el video.
-          </video>
-          <p class="dev-caption">Usuario 3 — opinión sobre la detección por sonido.</p>
-        </article>
+      <!-- Qué evaluamos -->
+      <div class="subsection" id="prueba-evaluacion">
+        <h3>Qué evaluamos</h3>
+        <p>Cada prueba se enfocó en un aspecto distinto de la experiencia.</p>
+        <ul class="check-list">
+          <li>La primera impresión de quien juega por primera vez.</li>
+          <li>Qué tan natural resulta la mecánica de la linterna.</li>
+          <li>Si la detección por sonido ayuda a anticipar al monstruo.</li>
+        </ul>
       </div>
 
-          </div>
+      <!-- Sesiones grabadas: duplica .test-item por cada usuario/prueba -->
+      <div class="subsection" id="prueba-sesiones">
+        <h3>Sesiones grabadas</h3>
+        <p>Videos de las pruebas junto con la opinión de cada usuario.</p>
+        <div class="test-gallery">
+          <article class="test-item">
+            <div class="test-media">
+              <video controls preload="none" poster="images/video-poster-1.jpg">
+                <source src="videos/prueba-1.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <p class="test-user">Usuario 1</p>
+            <h4>Primera vez jugando</h4>
+            <p class="dev-caption">Primera vez probando el juego.</p>
+            <span class="interaction-tag tag-visual">Experiencia</span>
+          </article>
+
+          <article class="test-item">
+            <div class="test-media">
+              <video controls preload="none" poster="images/video-poster-2.jpg">
+                <source src="videos/prueba-2.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <p class="test-user">Usuario 2</p>
+            <h4>Mecánica de linterna</h4>
+            <p class="dev-caption">Opinión sobre la mecánica de linterna.</p>
+            <span class="interaction-tag tag-touch">Interacción</span>
+          </article>
+
+          <article class="test-item">
+            <div class="test-media">
+              <video controls preload="none" poster="images/video-poster-3.jpg">
+                <source src="videos/prueba-3.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <p class="test-user">Usuario 3</p>
+            <h4>Detección por sonido</h4>
+            <p class="dev-caption">Opinión sobre la detección por sonido.</p>
+            <span class="interaction-tag tag-audio">Audio</span>
+          </article>
+        </div>
+      </div>
+
+    </div>
   </section>
 
 </main>
