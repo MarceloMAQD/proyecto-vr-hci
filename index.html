@@ -89,7 +89,7 @@
 
           <article class="idea-card">
             <div class="idea-media"><img src="images/idea-joaquin.jpg" alt="Boceto del juego de ritmo propuesto por Joaquín" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
-            <p class="idea-author">Joaquín Castelo</p>
+            <p class="idea-author">Joaquin Castelo</p>
             <h4>Beat saber</h4>
             <p>Juego de reacción y ritmo musical, cuyo objetivo es eliminar objetivos al ritmo de la música.</p>
           </article>
@@ -185,30 +185,70 @@
       <header class="section-head">
         <p class="step-label">Parte 2</p>
         <h2>Cómo lo desarrollamos</h2>
-        <p class="section-lead">
-          <!-- Reemplaza este texto con la narración real del desarrollo: bloqueo en Unity, modelado 3D, iluminación, sonido espacial, iteraciones, etc. -->
-          Aquí va la narración del desarrollo: capturas de Unity, avance de los modelos 3D y las decisiones que tomamos en el camino.
-        </p>
+        <p class="section-lead">Cuatro etapas: del primer boceto del cuarto en Unity hasta la versión final con el monstruo y sus mecánicas de ataque.</p>
       </header>
 
-      <!-- Plantilla de galería: duplica este bloque .dev-item por cada avance que quieras mostrar -->
-      <div class="dev-gallery">
-        <article class="dev-item">
-          <div class="idea-media wide"><img src="images/desarrollo-1.jpg" alt="Captura del entorno en Unity" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
-          <p class="dev-caption">Primer bloqueo del mapa (greybox) en Unity.</p>
-        </article>
-        <article class="dev-item">
-          <div class="idea-media wide"><img src="images/desarrollo-2.jpg" alt="Modelo 3D del personaje enemigo" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
-          <p class="dev-caption">Modelado del enemigo principal.</p>
-        </article>
-        <article class="dev-item">
-          <div class="idea-media wide"><img src="images/desarrollo-3.jpg" alt="Sistema de iluminación con linterna" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
-          <p class="dev-caption">Sistema de linterna e iluminación dinámica.</p>
-        </article>
+      <!-- 1 -->
+      <div class="subsection" id="dev-cuarto">
+        <h3>1 · Primera vista del cuarto</h3>
+        <p>Desarrollamos una primera versión del cuarto en Unity para definir el espacio donde transcurre la noche: la cama, la ventana y la puerta, que son los puntos por donde llegará la amenaza.</p>
+        <div class="final-media">
+          <article class="dev-item">
+            <div class="idea-media wide"><img src="images/desarrollo-1.jpg" alt="Primera vista del cuarto en Unity" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+            <p class="dev-caption">Primera vista del cuarto.</p>
+          </article>
+        </div>
       </div>
 
-      <p class="section-note">📁 Coloca tus imágenes en la carpeta <code>/images</code> con estos nombres (o cambia el <code>src</code> en <code>index.html</code>), y duplica el bloque <code>.dev-item</code> para agregar más avances.</p>
-    </div>
+      <!-- 2 -->
+      <div class="subsection" id="dev-monstruo">
+        <h3>2 · Elección del monstruo</h3>
+        <p>Escogimos un monstruo del Asset Store de Unity que encajara con el tono del juego, para enfocar el tiempo en las mecánicas en lugar de modelarlo desde cero.</p>
+        <div class="final-media">
+          <article class="dev-item">
+            <div class="idea-media wide"><img src="images/desarrollo-2.jpg" alt="Monstruo elegido del Asset Store de Unity" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+            <p class="dev-caption">Monstruo seleccionado de los assets de Unity.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="subsection" id="dev-ataques">
+        <h3>3 · Mecánicas de ataque del monstruo</h3>
+        <p>Desarrollamos tres formas de ataque: debajo de la cama, por la ventana y por la puerta. Para espantarlo, el jugador debe iluminarlo con la linterna bajo la cama y cerrar la puerta y la ventana a tiempo.</p>
+        <div class="dev-gallery" style="margin-top:32px">
+          <article class="dev-item">
+            <div class="idea-media wide"><img src="images/desarrollo-3a.jpg" alt="Monstruo atacando desde debajo de la cama" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+            <p class="dev-caption">Debajo de la cama: se ahuyenta iluminándolo con la linterna.</p>
+          </article>
+          <article class="dev-item">
+            <div class="idea-media wide"><img src="images/desarrollo-3b.jpg" alt="Monstruo atacando por la ventana" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+            <p class="dev-caption">Ventana: se evita cerrándola.</p>
+          </article>
+          <article class="dev-item">
+            <div class="idea-media wide"><img src="images/desarrollo-3c.jpg" alt="Monstruo atacando por la puerta" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+            <p class="dev-caption">Puerta: se evita cerrándola.</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="subsection" id="dev-final">
+        <h3>4 · Versión final del cuarto</h3>
+        <p>Con las mecánicas funcionando, terminamos la versión final del cuarto: ambientación, iluminación y detalles listos para las pruebas con usuarios.</p>
+        <div class="final-media">
+          <article class="dev-item">
+            <div class="idea-media wide"><img src="images/desarrollo-4a.jpg" alt="Versión final del cuarto" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+            <p class="dev-caption">Versión final del cuarto.</p>
+          </article>
+          <article class="dev-item">
+            <div class="idea-media wide"><img src="images/desarrollo-4b.jpg" alt="Otra vista de la versión final del cuarto" loading="lazy" onerror="this.parentElement.classList.add('img-missing')"></div>
+            <p class="dev-caption">Otra vista de la versión final.</p>
+          </article>
+        </div>
+      </div>
+
+      </div>
   </section>
 
   <!-- ================= SECCIÓN 3: PRUEBAS DE USUARIO ================= -->
@@ -241,15 +281,13 @@
         </article>
         <article class="test-item">
           <video controls preload="none" poster="images/video-poster-3.jpg">
-            <source src="videos/prueba-3.mp4" type="video/mp4">
             Tu navegador no soporta el video.
           </video>
           <p class="dev-caption">Usuario 3 — opinión sobre la detección por sonido.</p>
         </article>
       </div>
 
-      <p class="section-note">📁 Coloca tus videos en <code>/videos</code> y sus miniaturas en <code>/images</code> con estos nombres (o cambia el <code>src</code>/<code>poster</code> en <code>index.html</code>). Duplica <code>.test-item</code> para agregar más usuarios.</p>
-    </div>
+          </div>
   </section>
 
 </main>
