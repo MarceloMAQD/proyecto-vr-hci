@@ -43,8 +43,3 @@ proyecto-vr/
    carpeta (`/root` o `/docs`).
 3. Guarda; GitHub te dará una URL tipo
    `https://tu-usuario.github.io/tu-repo/` en un par de minutos.
-
-## Videos pesados
-Si los videos de las pruebas de usuario pesan mucho, GitHub Pages puede ir
-lento. Alternativas: subirlos a YouTube (aunque sea "no listado") e incrustar
-un `<iframe>` en vez de la etiqueta `<video>`, o comprimirlos antes de subirlos.
