@@ -669,3 +669,56 @@ p{ margin: 0 0 1em; color: var(--text-muted); }
   object-fit: contain; /* muestra el video completo, sin recortarlo */
   background: #000;
 }
+
+/* =========================================================
+   STORYBOARD (imágenes verticales mostradas en horizontal)
+========================================================= */
+.storyboard-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.sb-item{
+  display: block;
+  text-decoration: none;
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+  transition: border-color .2s ease, transform .2s ease;
+}
+.sb-item:hover{
+  border-color: var(--amber-dim);
+  transform: translateY(-3px);
+}
+
+.sb-frame{
+  --sb-rotate: 90deg;
+  position: relative;
+  aspect-ratio: 4 / 3;
+  container-type: size;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.sb-frame img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100cqh;                
+  height: 100cqw;              
+  object-fit: contain;
+  transform: translate(-50%, -50%) rotate(var(--sb-rotate));
+}
+
+.sb-caption{
+  margin: 12px 0 0;
+  font-size: .85rem;
+  color: var(--teal);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .sb-item{ transition: none; }
+  .sb-item:hover{ transform: none; }
+}
